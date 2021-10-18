@@ -1,1 +1,1 @@
-# python-slides
+# python-kit

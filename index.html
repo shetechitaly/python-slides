@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Python Toolkit</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/shetech.css" id="theme">
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div id="brand"><a class="brand_img" href="https://shetechitaly.org/" target="_blank" rel="noopener noreferrer"><img
+				src="img/shetech-logo.png" alt="Logo SheTech" width="50" height="50"></a> <a class="brand_img"
+			href="https://www.docebo.com/" target="_blank" rel="noopener noreferrer"><img
+				src="img/docebo-logo-vector.svg" alt="Logo Docebo" width="100" height="22"></a> </div>
+
+	<div class="reveal">
+
+		<div class="slides">
+
+			<section>
+				<img src="img/donuts.svg" alt="Donuts" id="donuts">
+				<h2>Python</h2>
+				<p class="intro">Sei iscritta al bootcamp di Python<br>e vorresti che fosse già sabato? ⌚<br>
+					Ecco un assaggio di quello che ti aspetta </p>
+				<div><button class="intro_btn" onclick="Reveal.slide(1, 0)">Basi</button><button class="intro_btn"
+						onclick="Reveal.slide(2, 0)">Siti utili</button></div>
+				<p class="notes">Usa barra spaziatrice e frecce per navigare</p>
+			</section>
+
+			<section>
+				<section>
+					<h3 id="python_title" class="slide_title">Le basi di Python</h3>
+					<p>Ecco alcuni concetti di base di programmazione in Python che verranno affrontati durante il
+						bootcamp e che serviranno per il Machine Learning</p>
+					<ul>
+						<li>Python è un linguaggio multipiattaforma e ricco di librerie per svolgere i compiti più
+							disparati, fra cui l'analisi dati</li>
+						<li>I file in Python hanno estensione <b>.py</b> (o <b>.ipynb</b> se viene utilizzato un
+							ambiente di calcolo interattivo)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>👋 🌎 "Hello world"</h3>
+					<ul>
+						<li>Per stampare qualcosa a schermo si usa il comando <span class="code">print()</span></li>
+						<li>Per immettere dati da tastiera si usa il comando <span class="code">input()</span> </li>
+						<li>Per avere maggiori informazioni su un certo comando o metodo si usa <span
+								class="code">help()</span></li>
+					</ul>
+
+					<p class="python-doc">Per saperne di più: <a
+							href="https://docs.python.org/3/library/functions.html#print" target="_blank"
+							rel="noopener noreferrer">print</a>, <a
+							href="https://docs.python.org/3/library/functions.html#input" target="_blank"
+							rel="noopener noreferrer">input</a>, <a
+							href="https://docs.python.org/3/library/functions.html#help" target="_blank"
+							rel="noopener noreferrer">help</a></p>
+				</section>
+
+
+				<section>
+					<h3>Variabili</h3>
+					<ul>
+						<li>Una variabile è un contenitore in cui puoi inserire valori e modificarli durante
+							l’esecuzione del tuo codice</li>
+						<li>Basta assegnare un oggetto a una variabile per dichiararla e inizializzarla:<br><span
+								class="code">x = 10</span></li>
+						<li>Per conoscere il tipo di dato contenuto nella variabile si usa il comando <span
+								class="code">type()</span></li>
+						<pre data-id="code"><code data-line-numbers class="hljs" data-trim>
+							numero = 5
+							<span class="hljs-strong">type(numero)</span>
+							< class 'int' >
+						</code></pre>
+					</ul>
+					<p class="python-doc"><a href="https://realpython.com/python-variables/" target="_blank"
+							rel="noopener noreferrer">Per saperne di più</a></p>
+
+				</section>
+
+				<section>
+					<h3>Tipi più comuni di dati</h3>
+					<table class="tabella_htmlit">
+						<tbody>
+							<tr>
+								<th>Tipo</th>
+								<th>Nome</th>
+								<th>Descrizione</th>
+								<th>Esempi</th>
+							</tr>
+							<tr>
+								<td>Intero</td>
+								<td><code>int</code></td>
+								<td>Intero</td>
+								<td>
+									<code>23400</code>, <code>-70</code>, <code>0</code>,
+									<code>999999999999999999</code>
+								</td>
+							</tr>
+							<tr>
+								<td>Reale</td>
+								<td><code>float</code></td>
+								<td>Numero a virgola mobile</td>
+								<td>
+									<code>3.14</code>, <code>1.23e-10</code>, <code>4.0E210</code>
+								</td>
+							</tr>
+							<tr>
+								<td>Booleano</td>
+								<td><code>bool</code></td>
+								<td>Per valori veri o falsi</td>
+								<td>
+									<code>True</code>, <code>False</code>
+								</td>
+							</tr>
+							<tr>
+								<td>Stringhe</td>
+								<td><code>str</code></td>
+								<td>testo</td>
+								<td>
+									<code>''</code>, <code>'aquilone'</code>, <code>"l'aquilone"</code>
+								</td>
+							</tr>
+							<tr>
+								<td>Liste</td>
+								<td><code>list</code></td>
+								<td>Sequenza mutabile di oggetti</td>
+								<td>
+									<code>[]</code>, <code>[1, 2, 3]</code>, <code>['Hello', 'World']</code>
+								</td>
+							</tr>
+							<tr>
+								<td>Tuple</td>
+								<td><code>tuple</code></td>
+								<td>Sequenza immutabile di oggetti</td>
+								<td>
+									<code>()</code>, <code>(1, 2, 3)</code>, <code>('Python', 3)</code>
+								</td>
+							</tr>
+							<tr>
+								<td>Dizionari</td>
+								<td><code>dict</code></td>
+								<td>Struttura chiavi-valori</td>
+								<td>
+									<code>{}</code>, <code>{'nome': 'SheTech', 'ambito': 'tecnologia'}</code>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<p class="python-doc"><a href="https://www.learnpython.org/en/Variables_and_Types" target="_blank"
+							rel="noopener noreferrer">Per saperne di più</a></p>
+				</section>
+
+				<section>
+					<h3>Commenti</h3>
+					<ul>
+						<li>I commenti servono a chi dovrà legge il codice per facilitarne la comprensione mentre
+							vengono ignorati dal programma.</li>
+						<li>Ogni riga di commento deve essere preceduta da <span class="code">#</span></li>
+						<li>I commenti multi linea sono inseriti tra triplici apici <span class="code">"""</span></li>
+					</ul>
+					<pre data-id="code"><code data-line-numbers class="hljs" data-trim>
+						<span class="hljs-strong">#</span> commento linea singola
+						<span class="hljs-strong">"""</span> commento
+						multi linea <span class="hljs-strong">"""</span>
+					</code></pre>
+					<p class="python-doc"><a href="https://thatascience.com/learn-python/comments-and-docstrings/"
+							target="_blank" rel="noopener noreferrer">Per saperne di più</a></p>
+				</section>
+
+				<section>
+					<h3>Stringhe</h3>
+					<ul>
+						<li>Le stringhe sono sequenze di caratteri racchiuse tra apici (') o virgolette (")</li>
+					</ul>
+					<pre data-id="code"><code data-line-numbers class="hljs" data-trim>				
+						"Questa è una stringa"
+					</code></pre>
+					<ul>
+						<li>Con le stringhe si possono compiere diverse operazioni. Eccone alcune:</li>
+					</ul>
+
+					<pre data-id="code"><code data-line-numbers class="hljs" data-trim>				
+						"Questa" <span class="hljs-strong">+</span> " è una stringa" # concatenazione
+						"Questa è una stringa"<span class="hljs-strong">.upper()</span> # trasformazione di tutta la stringa in maiuscolo
+						<span class="hljs-strong">len</span>("Questa è una stringa")  # ottenere la lunghezza della stringa
+					</code></pre>
+
+					<p class="python-doc"><a
+							href="https://www.codecademy.com/learn/learn-python-3/modules/learn-python3-strings/cheatsheet"
+							target="_blank" rel="noopener noreferrer">Per saperne di più</a></p>
+				</section>
+
+
+				<section>
+					<h3>Liste</h3>
+					<ul>
+						<li>Oltre ai tipi che abbiamo visto sopra, Python definisce anche degli oggetti.</li>
+						<li>Le liste sono oggetti contenitori di dimensione variabile che contengono altri oggetti.</li>
+					</ul>
+					<pre data-id="code"><code data-line-numbers class="hljs" data-trim>				
+							lista = [1,2,3,4,5,0]
+						</code></pre>
+					<ul>
+						<li>Con le liste si possono compiere diverse operazioni. Eccone alcune:</li>
+					</ul>
+					<pre data-id="code"><code data-line-numbers class="hljs" data-trim>				
+							<span class="hljs-strong">len</span>(lista) # calcolare il numero di elementi
+							lista.<span class="hljs-strong">sort()</span> # ordinare gli elementi  
+							lista.<span class="hljs-strong">append(nuovo_elemento)</span> # aggiungere elementi alla lista
+						</code></pre>
+
+
+					<p class="python-doc"><a href="https://www.programiz.com/python-programming/list" target="_blank"
+							rel="noopener noreferrer">Per saperne di più</a></p>
+				</section>
+
+
+				<section>
+					<h3>Dizionari</h3>
+					<ul>
+						<li>I dizionari sono degli oggetti in cui gli elementi sono memorizzati come coppie
+							chiave/valore: a ogni chiave corrisponde il proprio valore. </li>
+					</ul>
+					<pre data-id="code"><code data-line-numbers class="hljs" data-trim>				
+							scheda = {
+								"nome": "Alessandra",
+								"lavoro": "developer",
+								"linguaggi_di_programmazione": ["Python", "Javascript"],
+								"età": 28
+							}
+						</code></pre>
+						<ul>
+							<li>Usiamo le chiavi per richiamare i valori ad esse associati.</li>
+						</ul>	
+						<pre data-id="code"><code data-line-numbers class="hljs" data-trim>				
+							scheda["nome"]
+							Alessandra
+						</code></pre>
+
+					<p class="python-doc"><a href="https://www.learnpython.org/en/Dictionaries" target="_blank"
+							rel="noopener noreferrer">Per saperne di più</a></p>
+				</section>
+
+
+				<section>
+					<h3>Funzioni</h3>
+					<ul>
+						<li>Le funzioni (o metodi) ci permettono di raggruppare un insieme di istruzioni che eseguono un
+							compito specifico.</li>
+						<li>Le funzioni possono accettare in input uno o più argomenti (o parametri), li elaborano, e
+							restituiscono in output un risultato.</li>
+						<li>In Python le funzioni sono introdotte dalla parola chiave <span class="code">def</span></li>
+					</ul>
+
+					<pre data-id="code"><code data-line-numbers class="hljs" data-trim>
+						<span class="hljs-strong">def</span> print_tre_volte():
+						    print("Ciao!")
+						    print("Ciao una seconda volta!")
+						    print("Ciao una terza volta!")
+					</code></pre>
+
+					<p class="python-doc"><a
+							href="https://www.datacamp.com/community/tutorials/functions-python-tutorial"
+							target="_blank" rel="noopener noreferrer">Per saperne di più</a></p>
+				</section>
+
+
+				<section>
+					<h3>if...else</h3>
+					<ul>
+						<li>L’istruzione <span class="code">if</span> viene utilizzata quando vogliamo eseguire delle
+							istruzioni solo se una determinata condizione è vera oppure se è falsa</li>
+						<li>Se vogliamo eseguire altri comandi quando la condizione non risulta soddisfatta, aggiungiamo
+							l’istruzione <span class="code">else</span></li>
+						<li>Nel caso in cui ci siano più condizioni da valutare si può usare <span
+								class="code">elif</span> (contrazione di “else if”) </li>
+					</ul>
+					<pre data-id="code"><code data-line-numbers class="hljs" data-trim>
+						numero = 4
+						<span class="hljs-strong">if</span> numero > 10:
+						    print("il numero è maggiore di 10")
+							<span class="hljs-strong">elif</span> numero < 10:
+						    print("il numero è minore di 10")
+							<span class="hljs-strong">else</span>:
+						    print("il numero è uguale a 10")
+					</code></pre>
+					<p class="python-doc"><a href="http://anh.cs.luc.edu/handsonPythonTutorial/ifstatements.html"
+							target="_blank" rel="noopener noreferrer">Per saperne di più</a></p>
+				</section>
+
+
+				<section>
+					<h3>for</h3>
+					<ul>
+						<li>Se vogliamo eseguire una o più istruzioni un numero specifico di volte usiamo il ciclo <span
+								class="code">for</span>.</li>
+						<li>Per settare il numero di volte usiamo la funzione <span class="code">range()</span></li>
+					</ul>
+					<pre data-id="code"><code data-line-numbers class="hljs" data-trim>
+						<span class="hljs-strong">for</span> numero in <span class="hljs-strong">range(10)</span>:
+    					    print(numero) # stampa i numeri da 0 a 9
+					</code></pre>
+					<ul>
+						<li><span class="code">for</span> può essere usato anche per iterare sulle liste, ripetendo lo
+							stesso codice per ogni elemento all’interno della lista</li>
+					</ul>
+					<pre data-id="code"><code data-line-numbers class="hljs" data-trim>
+						for elemento in lista:              
+    					    print(elemento)
+					</code></pre>
+					<p class="python-doc"><a href="http://anh.cs.luc.edu/handsonPythonTutorial/loops.html"
+							target="_blank" rel="noopener noreferrer">Per saperne di più</a></p>
+				</section>
+
+				<section>
+					<h3>Indentazione</h3>
+					<ul>
+						<li>Python delimita i blocchi di codice con l'indetazione.</li>
+						<li>Quindi indentare in modo incorretto può portare a comportamenti sbagliati del programma o a
+							errori.</li>
+						<li>E' prassi comune usare 4 spazi per livello di indentazione; evitare l’uso dei caratteri di
+							tabulazione; non mischiare l’uso di tabulazioni e spazi.</li>
+					</ul>
+
+					<pre data-id="code"><code data-line-numbers class="hljs" data-trim>
+						if 5 > 2:
+						print("5 è maggiore di 2")
+						IndentationError: expected an indented block
+					</code></pre>
+
+					<p class="python-doc"><a href="https://www.askpython.com/python/python-indentation" target="_blank"
+							rel="noopener noreferrer">Per saperne di più</a></p>
+				</section>
+
+
+				<section>
+					<h3>Librerie</h3>
+					<ul>
+						<li>Una libreria è un insieme di funzioni di uso comune, per questo vengono raccolte e passate
+							in gruppo al programma che le userà.</li>
+						<li>Per installare una libreria si usa il comando <span class="code">pip install
+								nome_libreria</span></li>
+						<li>Per richiamare una libreria nel proprio script si usa <span class="code">import
+								nome_libreria</span></li>
+						<li>Fra le librerie che useremo sabato ci saranno <a
+								href="https://www.w3schools.com/python/numpy/numpy_intro.asp" target="_blank"
+								rel="noopener noreferrer">NumPy</a>, <a
+								href="https://www.w3schools.com/python/pandas/default.asp" target="_blank"
+								rel="noopener noreferrer">Pandas</a> e <a
+								href="https://scikit-learn.org/stable/tutorial/index.html" target="_blank"
+								rel="noopener noreferrer">scikit-learn</a>.</li>
+					</ul>
+					<p class="python-doc"><a
+							href="https://www.ubuntupit.com/best-python-libraries-and-packages-for-beginners/"
+							target="_blank" rel="noopener noreferrer">Per saperne di più</a></p>
+				</section>
+
+
+				<section>
+					<h3>Cos'è Colab e come si usa</h3>
+					<p>Sabato per il nostro esercizio useremo Google Colaboratory (Colab), una piattaforma gratuita per
+						scrivere ed eseguire codice Python attraverso un browser. L’unico requisito è possedere un
+						account Google (per esempio Gmail).</p>
+					<p><img src="img/sito-Colab.png" alt="schermata Colab" class="img_website"></p>
+					<p class="python-doc">Come usare Colab: <a href="https://www.youtube.com/watch?v=inN8seMm7UI"
+							target="_blank" rel="noopener noreferrer">Video</a> e <a
+							href="https://colab.research.google.com/github/Tanu-N-Prabhu/Python/blob/master/Cheat_sheet_for_Google_Colab.ipynb"
+							target="_blank" rel="noopener noreferrer">Cheat Sheet</a></p>
+				</section>
+
+			</section> <!-- END FIRST STEPS SECTION -->
+
+			<section>
+				<section>
+					<h2>📝 Siti utili</h2>
+					<p class="intro">Una serie di link e risorse per approfondire Python e il Machine Learning</p>
+				</section>
+
+				<section>
+					<h3 id="pythoncheatsheet_title" class="slide_title">Python for Data Science</h3>
+					<p>
+						<a href="https://www.edx.org/course/python-for-data-science-2?index=product&queryID=142d7f5fcf9c2622c5801380d3490ca6&position=1"
+							target="_blank" rel="noopener noreferrer"><img
+								src="img/sito-Python-for-Data-Science-edX.png"
+								alt="schermata sito edX Python for Data Science" class="img_website"></a>
+					</p>
+					<p><a href="https://www.edx.org/course/python-for-data-science-2?index=product&queryID=142d7f5fcf9c2622c5801380d3490ca6&position=1"
+							target="_blank" rel="noopener noreferrer">UC San Diego Python for Data Science</a> - Un mooc
+						per impara a utilizzare potenti strumenti Python open-source come Pandas, Git e Matplotlib e per
+						manipolare, analizzare e visualizzare set di dati complessi.
+					</p>
+				</section>
+
+				<section>
+					<h3 id="pythoncheatsheet_title" class="slide_title">Pythoncheatsheet.org</h3>
+					<p>
+						<a href="https://www.pythoncheatsheet.org/" target="_blank" rel="noopener noreferrer"><img
+								src="img/sito-PythonCheatsheet.png" alt="schermata sito Pythoncheatsheet.org"
+								class="img_website"></a>
+					</p>
+					<p><a href="https://www.pythoncheatsheet.org/" target="_blank"
+							rel="noopener noreferrer">Pythoncheatsheet.org</a> - Sito rivolto a sviluppatori
+						principianti e avanzati, con l'obiettivo di abbassare la barriera di ingresso per i nuovi
+						arrivati e fornire un supporto anche ai veterani del codice.
+					</p>
+				</section>
+
+				<section>
+					<h3 id="real_python_title" class="slide_title">Real Python</h3>
+					<p>
+						<a href="https://realpython.com/" target="_blank" rel="noopener noreferrer"><img
+								src="img/sito-Real-Python.png" alt="schermata sito Real Python" class="img_website"></a>
+					</p>
+					<p><a href="https://realpython.com/" target="_blank" rel="noopener noreferrer">Real Python</a> -
+						Sito per imparare Python dalle nozioni di base fino allo sviluppo web, allo
+						scraping web, alla visualizzazione dei dati e altro ancora.</p>
+				</section>
+
+				<section>
+					<h3 id="pwp_title" class="slide_title">Programming with Python</h3>
+					<p>
+						<a href="https://swcarpentry.github.io/python-novice-inflammation/" target="_blank"
+							rel="noopener noreferrer"><img src="img/sito-Programming-with-Python.png"
+								alt="schermata sito Programming with Python" class="img_website"></a>
+					</p>
+					<p> <a href="https://swcarpentry.github.io/python-novice-inflammation/" target="_blank"
+							rel="noopener noreferrer">Programming with Python</a> - Il modo migliore per imparare a
+						programmare è fare qualcosa di utile, quindi questa introduzione a Python è costruita attorno a
+						dei task di
+						analisi dei dati.</p>
+				</section>
+
+				<section>
+					<h3 id="hackinscience_title" class="slide_title">Hackinscience</h3>
+					<p>
+						<a href="https://www.hackinscience.org/" target="_blank" rel="noopener noreferrer"><img
+								src="img/sito-HackInScience.png" alt="schermata sito HackInScience.png"
+								class="img_website"></a>
+					</p>
+					<p><a href="https://www.hackinscience.org/" target="_blank"
+							rel="noopener noreferrer">Hackinscience</a> - Una piattaforma di esercizi Python
+						interattiva: scrivi il codice e ottieni un feedback istantaneo dal bot di correzione con
+						informazioni dettagliate sugli eventuali errori.</p>
+				</section>
+
+
+				<section>
+					<h3>Python Cheat Sheet</h3>
+					<p>
+						<a href="https://github.com/ehmatthes/pcc/blob/master/cheat_sheets/" target="_blank"
+							rel="noopener noreferrer"><img src="img/sito-python-crash-course.png" alt="preview pdf"
+								class="img_website"></a>
+					</p>
+					<p>
+						<a href="https://github.com/ehmatthes/pcc/blob/master/cheat_sheets/" target="_blank"
+							rel="noopener noreferrer">Python Cheat Sheets</a> - Questo set di cheat sheet ti aiuterà a
+						ricordare i concetti base così come la sintassi. Fanno parte del libro <a
+							href="https://nostarch.com/pythoncrashcourse2e" target="_blank"
+							rel="noopener noreferrer">Python Crash Course</a>
+					</p>
+				</section>
+
+
+				<section>
+					<h3 id="eduopen_title" class="slide_title">Eduopen</h3>
+					<p>
+						<a href="https://learn.eduopen.org/eduopenv2/course_details.php?courseid=194" target="_blank"
+							rel="noopener noreferrer"><img src="img/sito-eduopen.png" alt="schermata sito Eduopen"
+								class="img_website"></a>
+					</p>
+					<p>Il corso online in lingua italiana di <a
+							href="https://learn.eduopen.org/eduopenv2/course_details.php?courseid=194" target="_blank"
+							rel="noopener noreferrer">Introduzione alla programmazione con Python</a>
+						dell'Università di Genova e il pathway in <a
+							href="https://learn.eduopen.org/eduopenv2/pathway_details.php?specialid=57" target="_blank"
+							rel="noopener noreferrer">Calcolo Scientifico in Python</a> dell'Università di Padova</p>
+				</section>
+
+
+
+				<section>
+					<h3>ML for Beginners</h3>
+					<p>
+						<a href="https://github.com/microsoft/ML-For-Beginners/blob/main/README.md" target="_blank"
+							rel="noopener noreferrer"><img src="img/sito-ML-For-Beginners.png"
+								alt="schermata sito ML for Beginners" class="img_website"></a>
+					</p>
+					<p><a href="https://github.com/microsoft/ML-For-Beginners/blob/main/README.md" target="_blank"
+							rel="noopener noreferrer">Machine Learning for Beginners - A Curriculum</a> - Un percorso di
+						12 settimane e 24 lezioni sul Machine Learning. In questo curriculum imparerai il machine
+						learning classico, utilizzando principalmente la libreria Scikit-learn.</p>
+				</section>
+
+
+				<section>
+					<h3>Machine Learning Playground</h3>
+					<p>
+						<a href="https://mlplaygrounds.com/" target="_blank" rel="noopener noreferrer"><img
+								src="img/sito-ML-Playground.png" alt="schermata sito Machine Learning Playground"
+								class="img_website"></a>
+					</p>
+					<p><a href="https://mlplaygrounds.com/" target="_blank" rel="noopener noreferrer">Machine Learning
+							Playground</a> - Una piattaforma per giocare, esplorare e comprendere
+						diversi algoritmi di Machine Learning.</p>
+				</section>
+
+				<section>
+					<h3>UC Irvine ML Repository</h3>
+					<p>
+						<a href="https://archive.ics.uci.edu/ml/index.php" target="_blank"
+							rel="noopener noreferrer"><img src="img/sito-UCI-Machine-Learning-Repository.png"
+								alt="schermata sito UC Irvine ML Repository" class="img_website"></a>
+					</p>
+					<p> <a href="https://archive.ics.uci.edu/ml/index.php" target="_blank" rel="noopener noreferrer">UC
+							Irvine Machine Learning Repository</a> - Un sito con più di 500 dataset su cui potersi
+						esercitare con le tecniche di Machine Learning.</p>
+				</section>
+
+				<section>
+					<h3>ML Specialization</h3>
+					<p>
+						<a href="https://www.coursera.org/specializations/machine-learning" target="_blank"
+							rel="noopener noreferrer"><img src="img/sito-Machine-Learning-Coursera.png"
+								alt="schermata sito Coursera Machine Learning Specialization" class="img_website"></a>
+					</p>
+					<p> <a href="https://www.coursera.org/specializations/machine-learning" target="_blank"
+							rel="noopener noreferrer">University of Washington Machine Learning Specialization</a> - Una
+						specializzazione che, attraverso una serie di casi di studio pratici, permette di acquisire
+						esperienza applicativa nelle principali aree dell'apprendimento automatico, tra cui previsione,
+						classificazione, clustering e recupero delle informazioni.</p>
+				</section>
+
+				<section>
+					<h3>#aiadventures</h3>
+					<p>
+						<a href="https://www.youtube.com/hashtag/aiadventures" target="_blank"
+							rel="noopener noreferrer"><img src="img/sito-aiadventures.png"
+								alt="schermata sito #aiadventures" class="img_website"></a>
+					</p>
+					<p><a href="https://www.youtube.com/hashtag/aiadventures" target="_blank"
+							rel="noopener noreferrer">#aiadventures</a> - Un canale video che esplora l'arte, la scienza
+						e gli strumenti del Machine Learning.</p>
+				</section>
+
+
+				<section>
+					<h3 id="aigoogle_title" class="slide_title">Google Ai Education</h3>
+					<p>
+						<a href="https://ai.google/education/" target="_blank" rel="noopener noreferrer"><img
+								src="img/sito-Google-AI.png" alt="schermata sito Google Ai Education"
+								class="img_website"></a>
+					</p>
+					<p><a href="https://ai.google/education/" target="_blank" rel="noopener noreferrer">Google Ai
+							Education</a> - Informazioni, tool, dataset ed esercizi per aiutarti a sviluppare le tue
+						abilità e far avanzare i tuoi progetti.</p>
+				</section>
+
+				<section>
+					<h3 id="aigoogle_title" class="slide_title">Udemy</h3>
+					<p>
+						<a href="https://www.udemy.com/course/data-science-con-python/" target="_blank"
+							rel="noopener noreferrer"><img src="img/sito-Python-Udemy.png"
+								alt="schermata sito Udemy Corso" class="img_website"></a>
+					</p>
+					<p><a href="https://www.udemy.com/course/data-science-con-python/" target="_blank"
+							rel="noopener noreferrer">Udemy Corso completo di Data Science e Machine Learning con
+							Python</a> - Corso in lingua italiana per diventare da principiante a esperto nelle tecniche
+						di Data Science con Python.</p>
+				</section>
+
+				<section>
+					<h3 id="aigoogle_title" class="slide_title">Kaggle tutorial</h3>
+					<p>
+						<a href="https://www.kaggle.com/learn" target="_blank" rel="noopener noreferrer"><img
+								src="img/sito-Kaggle.png" alt="schermata sito Kaggle" class="img_website"></a>
+					</p>
+					<p><a href="https://www.kaggle.com/learn" target="_blank" rel="noopener noreferrer">Kaggle </a> -
+						Una serie di tutorial che riducono gli argomenti complessi alle loro componenti pratiche chiave.
+					</p>
+				</section>
+
+			</section><!-- END TIPS SECTION -->
+
+			<section>
+				<h4>Strumenti utili per sabato</h4>				
+					<p>
+						Sabato per connetterci utilizzeremo le piattaforme <a href="https://zoom.us/" target="_blank"
+							rel="noopener noreferrer">Zoom</a> e <a href="https://discord.com/" target="_blank"
+							rel="noopener noreferrer">Discord</a>, entrambe gratuite. Se non hai ancora avuto occasione di utilizzarle, ecco 2 brevi guide:
+					</p>
+					<p>
+						<img src="img/zoom-discord.jpg" alt="schermata sito Kaggle" class="img_website">
+					</p>
+				<ul>
+					<li><a href="https://www.punto-informatico.it/zoom-guida-completa/" target="_blank" rel="noopener noreferrer">Zoom: la guida completa</a></li>
+					<li><a href="https://support.discord.com/hc/it/articles/360045138571-Discord-Guida-per-iniziare#h_01EVWH6S2AECZVWGM7CGA0VHQD" target="_blank" rel="noopener noreferrer">Discord: Guida per iniziare</a></li>
+				</ul>
+			</section>
+
+			<section>
+				<h4>Credits</h4>
+				<p class="credits">
+					<a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">python.org</a>, <a
+						href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank"
+						rel="noopener noreferrer">GPL</a>, <a
+						href="https://commons.wikimedia.org/w/index.php?curid=34991651" target="_blank"
+						rel="noopener noreferrer">commons.wikimedia.org</a><br>
+					<a href="https://revealjs.com/" target="_blank" rel="noopener noreferrer">Reveal.js</a><br>
+					<a href="https://emojipedia.org/" rel="noopener noreferrer">Emojipedia</a> <br>
+					<a href="https://www.vecteezy.com/free-vector/cartoon" target="_blank"
+						rel="noopener noreferrer">Vecteezy</a>
+				</p>
+			</section>
+
+
+		</div>
+
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script>
+		Reveal.initialize({
+			history: true,
+			transition: 'linear',
+		});
+	</script>
+
+</body>
+
+</html>
