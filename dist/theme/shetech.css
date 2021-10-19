@@ -186,6 +186,10 @@ section.has-light-background, section.has-light-background h1, section.has-light
   top:0;
 }
 
+.reveal .container {
+  text-align: left;
+}
+
 .reveal .img_website {
   width: 100%;
   max-width: 500px;

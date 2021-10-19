@@ -67,19 +67,22 @@
 
 				<section>
 					<h3>Variabili</h3>
-					<ul>
-						<li>Una variabile è un contenitore in cui puoi inserire valori e modificarli durante
-							l’esecuzione del tuo codice</li>
-						<li>Basta assegnare un oggetto a una variabile per dichiararla e inizializzarla:<br><span
-								class="code">x = 10</span></li>
-						<li>Per conoscere il tipo di dato contenuto nella variabile si usa il comando <span
-								class="code">type()</span></li>
+					<div class="container">
+						<ul>
+							<li>Una variabile è un contenitore in cui puoi inserire valori e modificarli durante
+								l’esecuzione del tuo codice</li>
+							<li>Basta assegnare un oggetto a una variabile per dichiararla e inizializzarla:<br><span
+									class="code">x = 10</span></li>
+							<li>Per conoscere il tipo di dato contenuto nella variabile si usa il comando <span
+									class="code">type()</span></li>
+						</ul>
 						<pre data-id="code"><code data-line-numbers class="hljs" data-trim>
 							numero = 5
 							<span class="hljs-strong">type(numero)</span>
 							< class 'int' >
 						</code></pre>
-					</ul>
+					</div>
+
 					<p class="python-doc"><a href="https://realpython.com/python-variables/" target="_blank"
 							rel="noopener noreferrer">Per saperne di più</a></p>
 
@@ -177,21 +180,24 @@
 
 				<section>
 					<h3>Stringhe</h3>
-					<ul>
-						<li>Le stringhe sono sequenze di caratteri racchiuse tra apici (') o virgolette (")</li>
-					</ul>
-					<pre data-id="code"><code data-line-numbers class="hljs" data-trim>				
-						"Questa è una stringa"
-					</code></pre>
-					<ul>
-						<li>Con le stringhe si possono compiere diverse operazioni. Eccone alcune:</li>
-					</ul>
+					<div class="container">
+						<ul>
+							<li>Le stringhe sono sequenze di caratteri racchiuse tra apici (') o virgolette (")</li>
+						</ul>
+						<pre data-id="code"><code data-line-numbers class="hljs" data-trim>				
+							"Questa è una stringa"
+						</code></pre>
+						<ul>
+							<li>Con le stringhe si possono compiere diverse operazioni. Eccone alcune:</li>
+						</ul>
 
-					<pre data-id="code"><code data-line-numbers class="hljs" data-trim>				
-						"Questa" <span class="hljs-strong">+</span> " è una stringa" # concatenazione
-						"Questa è una stringa"<span class="hljs-strong">.upper()</span> # trasformazione di tutta la stringa in maiuscolo
-						<span class="hljs-strong">len</span>("Questa è una stringa")  # ottenere la lunghezza della stringa
-					</code></pre>
+						<pre data-id="code"><code data-line-numbers class="hljs" data-trim>				
+							"Questa" <span class="hljs-strong">+</span> " è una stringa" # concatenazione
+							"Questa è una stringa"<span class="hljs-strong">.upper()</span> # trasformazione di tutta la stringa in maiuscolo
+							<span class="hljs-strong">len</span>("Questa è una stringa")  # ottenere la lunghezza della stringa
+						</code></pre>						
+					</div>
+
 
 					<p class="python-doc"><a
 							href="https://www.codecademy.com/learn/learn-python-3/modules/learn-python3-strings/cheatsheet"
@@ -201,21 +207,24 @@
 
 				<section>
 					<h3>Liste</h3>
-					<ul>
-						<li>Oltre ai tipi che abbiamo visto sopra, Python definisce anche degli oggetti</li>
-						<li>Le liste sono oggetti contenitori di dimensione variabile che contengono altri oggetti</li>
-					</ul>
-					<pre data-id="code"><code data-line-numbers class="hljs" data-trim>				
-							lista = [1,2,3,4,5,0]
-						</code></pre>
-					<ul>
-						<li>Con le liste si possono compiere diverse operazioni. Eccone alcune:</li>
-					</ul>
-					<pre data-id="code"><code data-line-numbers class="hljs" data-trim>				
-							<span class="hljs-strong">len</span>(lista) # calcolare il numero di elementi
-							lista.<span class="hljs-strong">sort()</span> # ordinare gli elementi  
-							lista.<span class="hljs-strong">append(nuovo_elemento)</span> # aggiungere elementi alla lista
-						</code></pre>
+					<div class="container">
+						<ul>
+							<li>Oltre ai tipi che abbiamo visto sopra, Python definisce anche degli oggetti</li>
+							<li>Le liste sono oggetti contenitori di dimensione variabile che contengono altri oggetti</li>
+						</ul>
+						<pre data-id="code"><code data-line-numbers class="hljs" data-trim>				
+								lista = [1,2,3,4,5,0]
+							</code></pre>
+						<ul>
+							<li>Con le liste si possono compiere diverse operazioni. Eccone alcune:</li>
+						</ul>
+						<pre data-id="code"><code data-line-numbers class="hljs" data-trim>				
+								<span class="hljs-strong">len</span>(lista) # calcolare il numero di elementi
+								lista.<span class="hljs-strong">sort()</span> # ordinare gli elementi  
+								lista.<span class="hljs-strong">append(nuovo_elemento)</span> # aggiungere elementi alla lista
+							</code></pre>						
+					</div>
+
 
 
 					<p class="python-doc"><a href="https://www.programiz.com/python-programming/list" target="_blank"
@@ -225,25 +234,28 @@
 
 				<section>
 					<h3>Dizionari</h3>
-					<ul>
-						<li>I dizionari sono degli oggetti in cui gli elementi sono memorizzati come coppie
-							chiave/valore: a ogni chiave corrisponde il proprio valore </li>
-					</ul>
-					<pre data-id="code"><code data-line-numbers class="hljs" data-trim>				
-							scheda = {
-								"nome": "Alessandra",
-								"lavoro": "developer",
-								"linguaggi_di_programmazione": ["Python", "Javascript"],
-								"età": 28
-							}
-						</code></pre>
+					<div class="container">
 						<ul>
-							<li>Usiamo le chiavi per richiamare i valori ad esse associati</li>
-						</ul>	
+							<li>I dizionari sono degli oggetti in cui gli elementi sono memorizzati come coppie
+								chiave/valore: a ogni chiave corrisponde il proprio valore </li>
+						</ul>
 						<pre data-id="code"><code data-line-numbers class="hljs" data-trim>				
-							scheda["nome"]
-							Alessandra
-						</code></pre>
+								scheda = {
+									"nome": "Alessandra",
+									"lavoro": "developer",
+									"linguaggi_di_programmazione": ["Python", "Javascript"],
+									"età": 28
+								}
+							</code></pre>
+							<ul>
+								<li>Usiamo le chiavi per richiamare i valori ad esse associati</li>
+							</ul>	
+							<pre data-id="code"><code data-line-numbers class="hljs" data-trim>				
+								scheda["nome"]
+								Alessandra
+							</code></pre>						
+					</div>
+
 
 					<p class="python-doc"><a href="https://www.learnpython.org/en/Dictionaries" target="_blank"
 							rel="noopener noreferrer">Per saperne di più</a></p>
