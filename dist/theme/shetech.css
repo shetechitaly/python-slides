@@ -21,7 +21,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
   --r-heading-margin: 0 0 20px 0;
   --r-heading-font: Montserrat, Roboto, sans-serif;
   /* --r-heading-color: #111; */
-  --r-heading-color: #A90493;
+  --r-heading-color: #E1058D;
   --r-heading-line-height: 1.2;
   --r-heading-letter-spacing: -0.03em;
   --r-heading-text-transform: none;
@@ -203,48 +203,6 @@ section.has-light-background, section.has-light-background h1, section.has-light
   margin: 0;
 }
 
-/* 
-#pythoncheatsheet_title::before {
-  content:url('../../img/icona-pythoncheatsheet.png');
-  position:relative;
-  left:-5px;
-  top:0;
-}
-
-#hackinscience_title::before {
-  content:url('../../img/icona-hackinscience.png');
-  position:relative;
-  left:-5px;
-  top:0;
-}
-
-#eduopen_title::before {
-  content:url('../../img/icona-eduopen.png');
-  position:relative;
-  left:-5px;
-  top:0;
-}
-
-#real_python_title::before {
-  content:url('../../img/icona-Real-Python.jpg');
-  position:relative;
-  left:-5px;
-  top:0;
-}
-
-#pwp_title::before {
-  content:url('../../img/icona-Programming-with-Python.png');
-  position:relative;
-  left:-5px;
-  top:0;
-}
-
-#aigoogle_title::before {
-  content:url('../../img/icona-google-ai.jpg');
-  position:relative;
-  left:-5px;
-  top:0;
-} */
 
 
 .reveal p.credits {
@@ -547,6 +505,14 @@ span.code {
 
   .reveal p,
   .reveal li {
+    font-size: 50px;
+  }
+
+  .reveal p.intro {
+    font-size: 50px;
+  }
+
+  .reveal p.notes {
     font-size: 50px;
   }
  }
